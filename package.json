@@ -2,12 +2,12 @@
     "name": "martinhodler.searchin",
     "title": "Search-In",
     "description": "Search a selected text directly in the MDN.",
-    "homepage": "",
+    "homepage": "https://github.com/martinhodler/searchin",
     "version": "1.0.0",
     "author": "Martin Hodler,
     "email": "martin.hodler@gmail.com",
     "type": "git",
-    "url": "",
+    "url": "https://github.com/martinhodler/searchin.git",
     "engines": {
         "brackets": ">=0.41.0",
     }
