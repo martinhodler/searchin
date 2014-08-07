@@ -4,11 +4,11 @@
     "description": "Search a selected text directly in the MDN.",
     "homepage": "https://github.com/martinhodler/searchin",
     "version": "1.0.0",
-    "author": "Martin Hodler,
+    "author": "Martin Hodler",
     "email": "martin.hodler@gmail.com",
     "type": "git",
     "url": "https://github.com/martinhodler/searchin.git",
     "engines": {
-        "brackets": ">=0.41.0",
+        "brackets": ">=0.41.0"
     }
 }
