@@ -1,9 +1,9 @@
 {
     "name": "martinhodler.searchin",
-    "title": "Search-In",
-    "description": "Search a selected text directly in the MDN.",
+    "title": "SearchIN",
+    "description": "Search a selected text directly in the MDN or WebPlatform.",
     "homepage": "https://github.com/martinhodler/searchin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Martin Hodler",
     "email": "martin.hodler@gmail.com",
     "type": "git",

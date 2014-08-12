@@ -13,7 +13,7 @@ define(function (require, exports, module) {
         EditorManager  = brackets.getModule("editor/EditorManager");
 
     
-    // Function to run when the menu item is clicked
+    
     function searchMDN() {
         var editor = EditorManager.getCurrentFullEditor();
         if (editor.hasSelection()) {
@@ -21,19 +21,23 @@ define(function (require, exports, module) {
             NativeApp.openURLInDefaultBrowser("https://developer.mozilla.org/search?q=" + text);
         }
     }
+    
+    function searchWebPlatform() {
+        var editor = EditorManager.getCurrentFullEditor();
+        if (editor.hasSelection()) {
+            var text = editor.getSelectedText();
+            NativeApp.openURLInDefaultBrowser("http://docs.webplatform.org/w/index.php?search=" + text);
+        }
+    }
 
-
-    // First, register a command - a UI-less object associating an id to a handler
-    var HELPSEARCH_MDN = "helpsearch.MDN";   // package-style naming to avoid collisions
-    CommandManager.register("Search in MDN", HELPSEARCH_MDN, searchMDN);
-
-    // Then create a menu item bound to the command
-    // The label of the menu item is the name we gave the command (see above)
     var menu = Menus.getContextMenu(Menus.ContextMenuIds.EDITOR_MENU);
     menu.addMenuDivider(Menus.LAST, Menus.LAST);      
-    var item = menu.addMenuItem(HELPSEARCH_MDN);
-
-    // We could also add a key binding at the same time:
-    //menu.addMenuItem(MY_COMMAND_ID, "Ctrl-Alt-H");
-    // (Note: "Ctrl" is automatically mapped to "Cmd" on Mac)
+    
+    var SEARCHIN_MDN = "searchin.MDN";   
+    CommandManager.register("Search in MDN", SEARCHIN_MDN, searchMDN);
+    menu.addMenuItem(SEARCHIN_MDN);
+    
+    var SEARCHIN_WEBPLATFORM = "searchin.WebPlatform";
+    CommandManager.register("Search in WebPlatform", SEARCHIN_WEBPLATFORM, searchWebPlatform);
+    menu.addMenuItem(SEARCHIN_WEBPLATFORM);
 });
