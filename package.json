@@ -3,7 +3,7 @@
     "title": "SearchIN",
     "description": "Search a selected text directly in the MDN or WebPlatform.",
     "homepage": "https://github.com/martinhodler/searchin",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "Martin Hodler",
     "email": "martin.hodler@gmail.com",
     "type": "git",
